@@ -1,15 +1,16 @@
 import express from 'express'
-import { createCourse } from './routes'
-import { categoriesRoutes } from './routes/categories.routes'
-import { specificationsRoutes } from './routes/specifications.routes'
+import swaggerUi from 'swagger-ui-express'
+
+import swaggerFile from './swagger.json'
+import { router } from './routes'
 
 const app = express()
 
 app.use(express.json())
-app.use('/categories', categoriesRoutes)
-app.use('/specifications', specificationsRoutes)
 
-app.get('/', createCourse)
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+
+app.use(router)
 
 app.listen(3333, () => {
   console.log('🚀 Server launched successfully on port 3333')
