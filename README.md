@@ -13,9 +13,9 @@ Every newly registered car must be available
 
 ** Functional Requirement **
 All available cars should be presented on a list
-List all cars according to its category
-List all cars according to its brand
-List all cars according to its model
+List all cars according to their category
+List all cars according to their brand
+List all cars according to their model
 
 ** Business Rules **
 The user doesn't need to be logged into the system
