@@ -1,0 +1,22 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Docker: Attach to Node",
+      "port": 9229,
+      "request": "attach",
+      "type": "node", 
+      "address": "localhost", 
+      "remoteRoot": "/src/",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "sourceMapPathOverrides": {
+        "/usr/app/*": "${workspaceRoot}/*"
+      }
+    }
+  ]
+}

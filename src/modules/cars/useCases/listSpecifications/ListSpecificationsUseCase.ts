@@ -1,7 +1,7 @@
 import { Request, Response } from "express"
-import { Specification } from "../../entities/Specification"
-import { SpecificationsRepository } from "../../repositories/implementations/SpecificationsRepository"
+import { Specification } from "@modules/cars/infra/typeorm/entities/Specification"
 import { inject, injectable } from "tsyringe"
+import { SpecificationsRepository } from "@modules/cars/infra/typeorm/repositories/SpecificationsRepository"
 
 @injectable()
 class ListSpecificationsUseCase {

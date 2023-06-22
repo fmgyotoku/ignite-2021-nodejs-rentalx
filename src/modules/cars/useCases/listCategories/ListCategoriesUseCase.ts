@@ -1,6 +1,6 @@
 import { Request, Response } from "express"
-import { ICategoriesRepository } from "../../repositories/ICategoriesRepository"
-import { Category } from "../../entities/Category"
+import { ICategoriesRepository } from "@modules/cars/repositories/ICategoriesRepository"
+import { Category } from "@modules/cars/infra/typeorm/entities/Category"
 import { inject, injectable } from "tsyringe"
 
 @injectable()

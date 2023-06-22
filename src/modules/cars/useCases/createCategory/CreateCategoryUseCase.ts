@@ -1,6 +1,8 @@
+import "reflect-metadata"
 import { inject, injectable } from "tsyringe"
-import { ICategoriesRepository } from "../../repositories/ICategoriesRepository"
-import { AppError } from "../../../../errors/AppError"
+
+import { ICategoriesRepository } from "@modules/cars/repositories/ICategoriesRepository"
+import { AppError } from "@shared/errors/AppError"
 
 interface IRequest {
   name: string
@@ -12,7 +14,7 @@ class CreateCategoryUseCase {
   constructor(
     @inject("CategoriesRepository")
     private categoriesRepository: ICategoriesRepository
-  ) {}
+  ) { }
 
   async execute({ name, description }: IRequest): Promise<void> {
     const category = await this.categoriesRepository.findByName(name)

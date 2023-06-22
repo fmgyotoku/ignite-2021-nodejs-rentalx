@@ -1,6 +1,6 @@
 import { Request, Response } from "express"
 import { ListSpecificationsUseCase } from "./ListSpecificationsUseCase"
-import { Specification } from "../../entities/Specification"
+import { Specification } from "../../infra/typeorm/entities/Specification"
 import { container } from "tsyringe"
 
 class ListSpecificationsController {
